@@ -26,11 +26,17 @@
   * скрипт в package.json: `"start": "webpack serve --mode development"`
 10. настройка babel:
   * установка babel: `npm i -D @babel/core @babel/cli @babel/preset-env` и `npm i core-js@3`
-  * создать файл конфигурации: `babel.config.json`
-  * создать файл: `.browserslistrc`
+  * создать файл конфигурации: `babel.config.json` c [настройками](babel.config.json)
+  * создать файл: `.browserslistrc` c [настройками](.browserslistrc)
   * установка babel-загрузчика:`npm i -D babel-loader`
   * обучение webpack в `rules`: `{test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},`
-11. настройка webpack-merge:
+11. настройка eslint:
+  * установка eslint 8-ой версии: `npm i -D eslint@8.57.0`
+  * установка Airbnb JavaScript Style Guide: `npm i -D eslint-config-airbnb-base`
+  * скрипт в package.json: `"lint": "eslint . --fix"`
+  * создать файл конфигурации: `.eslintrc.js` с [настройками](.eslintrc.js)
+  * создать файл: `.eslintignore` и прописать в него `dist`
+12. настройка webpack-merge:
   * установка webpack-merge: `npm i -D webpack-merge`
   * создание файлов: `webpack.common.config.js`, `webpack.production.config.js` и `webpack.development.config.js`
   * подключение этих файлов в `webpack.config.js`и перенос логики
